@@ -20,7 +20,7 @@ To run MateX locally, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/matex.git
+(https://github.com/Codexgigaa/MateX/)
     ```
    
 2. **Install Dependencies**:
@@ -50,15 +50,11 @@ Once the application is running, MateX will be available through a web interface
 
 ## Contributions
 
-We welcome contributions from the community! If you'd like to improve MateX, feel free to fork the repository and submit a pull request. Please make sure to adhere to the contribution guidelines outlined in `CONTRIBUTING.md`.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+We welcome contributions from the community! If you'd like to improve MateX, feel free to fork the repository and submit a pull request. Please make sure to adhere to the contribution guidelines outlined in `(https://github.com/Codexgigaa/MateX/edit/main/README.md)`.
 
 ## Contact
 
-For any questions, suggestions, or feedback, please open an issue or reach out to [your-email@example.com].
+For any questions, suggestions, or feedback, please open an issue or reach out to [lovishlovish107@gmail.com].
 
 ---
 
