@@ -3,6 +3,7 @@ import streamlit as st
 import os
 import google.generativeai as genai
 from transformers import pipeline
+import torch
 
 # Load environment variables
 load_dotenv()
@@ -15,7 +16,12 @@ modal = genai.GenerativeModel("gemini-pro")
 chat = modal.start_chat(history=[])
 
 # Initialize the sentiment analysis model using Hugging Face's transformers pipeline
-emotion_analyzer = pipeline("sentiment-analysis")
+# Explicit model name and device to avoid meta tensor error
+emotion_analyzer = pipeline(
+    "sentiment-analysis",
+    model="distilbert-base-uncased-finetuned-sst-2-english",
+    device=0 if torch.cuda.is_available() else -1
+)
 
 # Function to get the Gemini response
 def get_gemini_response(question):
