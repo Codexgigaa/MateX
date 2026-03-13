@@ -1,0 +1,21 @@
+from pydantic import BaseModel, Field
+from typing import Optional
+from datetime import datetime
+
+# 1. Request Model: यूजर से क्या इनपुट आएगा
+class ChatRequest(BaseModel):
+    prompt: str = Field(..., example="I'm feeling a bit stressed about my exams.", min_length=1)
+    user_id: Optional[str] = Field(None, example="user_123")
+
+# 2. Response Model: MateX क्या वापस भेजेगा
+class ChatResponse(BaseModel):
+    matex_response: str
+    emotion_sensed: Optional[str] = Field(None, description="The emotion detected by MateX")
+    timestamp: datetime = Field(default_factory=datetime.now)
+    status: str = "success"
+
+# 3. Error Model: अगर कुछ गलत होता है
+class ErrorResponse(BaseModel):
+    success: bool = False
+    message: str
+    error_code: int
