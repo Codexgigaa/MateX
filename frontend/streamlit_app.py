@@ -8,7 +8,7 @@ st.set_page_config(page_title="MateX | AI Assistant", page_icon="🤖", layout="
 # 2. Custom Styling (CSS for a cleaner look)
 st.markdown("""
     <style>
-    .main { background-color: #f5f7f9; }
+    .main { background-color: purple; opacity: 0.7 }
     .stTextInput>div>div>input { border-radius: 20px; }
     .stButton>button { border-radius: 20px; width: 100%; background-color: #4CAF50; color: white; }
     .matex-response { background-color: #ffffff; padding: 20px; border-radius: 15px; border-left: 5px solid #4CAF50; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
