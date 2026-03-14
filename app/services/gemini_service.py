@@ -4,9 +4,8 @@ from dotenv import load_dotenv
 import time
 #here we load dotenv
 load_dotenv()
-
 #apikey 
-apiKey = os.getenv('API_key')
+apiKey = os.getenv('gapi') #API_key
 
 if not apiKey:
     print("fail to load")

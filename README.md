@@ -59,3 +59,25 @@ For any questions, suggestions, or feedback, please open an issue or reach out t
 ---
 
 This README provides a high-level overview of the project, instructions for installation, and guidance on how to use MateX.
+project/
+│
+├── app/
+│   ├── main.py
+│   ├── config.py
+│   ├── routes/
+│   │    └── chat.py
+│   ├── services/
+│   │    └── gemini_service.py
+│   ├── models/
+│   │    └── chat_model.py
+│   ├── database/
+│   │    └── db.py
+│
+├── frontend/
+│   └── streamlit_app.py
+│
+├── tests/
+│
+├── Dockerfile
+├── requirements.txt
+└── .env
