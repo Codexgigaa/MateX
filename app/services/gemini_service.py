@@ -7,7 +7,7 @@ load_dotenv()
 
 #apikey 
 apiKey = os.getenv('API_key')
-
+# print(apiKey)
 if not apiKey:
     print("fail to load")
     raise ValueError("GOOGLE_API_KEY not found in environment variable")

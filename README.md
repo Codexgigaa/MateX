@@ -30,23 +30,140 @@ To run MateX locally, follow these steps:
     pip install -r requirements.txt
     ```
 
-3. **Run the Application**:
-    Start the chatbot by running:
-    ```bash
-    python app.py
-    ```
+# AI Motivation Board (Gemini Powered)
+
+This project is a motivational AI chat application built using:
+
+- FastAPI (backend API)
+- Streamlit (frontend UI)
+- Google Gemini API (LLM)
+- SQLite (database)
+
+Users must provide their own **Gemini API key** to use the AI service.
+
+---
+steps are as follow
+
+# 1. Get a Gemini API Key
+
+1. Open Google AI Studio  
+https://aistudio.google.com/
+
+2. Sign in with your Google account.
+
+3. Click **Get API Key**.
+
+4. Create a new API key.
+
+Copy the key for later use.
+
+---
+
+# 2. Clone the Repository
+
+git clone https://github.com/your-repo/ai-motivation-board.git
+
+cd ai-motivation-board
+
+---
+
+# 3. Install Dependencies
+
+Make sure Python 3.10+ is installed.
+
+pip install -r requirements.txt
+
+---
+
+# 4. Configure Environment Variables
+
+Create a `.env` file in the project root directory.
+
+Example:
+
+.env
+
+GEMINI_API_KEY=your_api_key_here
+DATABASE_URL=sqlite:///./chat.db
+
+Replace `your_api_key_here` with the API key you generated from Google AI Studio.
+
+---
+
+# 5. Run the Backend Server
+
+uvicorn app.main:app --reload
+
+Backend will start at:
+
+http://localhost:8000
+
+---
+
+# 6. Run the Frontend
+
+Open another terminal and run:
+
+streamlit run frontend/streamlit_app.py
+
+The web interface will open automatically in your browser.
+
+---
+
+# 7. How the AI Service Works
+
+1. User enters a message in the Streamlit interface.
+2. The frontend sends the message to the FastAPI backend.
+3. FastAPI calls the Gemini API using your API key.
+4. Gemini generates a response.
+5. The response is returned and displayed in the UI.
+
+---
+
+# 8. Important Notes
+
+- This project does NOT store your API key.
+- Your API key is loaded from the `.env` file using environment variables.
+- Never commit your `.env` file to GitHub.
+
+---
+
+# 9. Troubleshooting
+
+If you see errors like:
+
+Invalid API Key  
+or  
+Insufficient quota
+
+Check that:
+
+- Your API key is correct
+- The `.env` file exists
+- The key has access to Gemini models
+
+---
+
+# 10. Example Prompt
+
+Try asking:
+
+Give me a motivational quote for studying.
+
+or
+
+How can I stay consistent while learning programming?
+
+---
+
+# License
+
+This project is for educational and development purposes.
 
 ## Usage
 
 Once the application is running, MateX will be available through a web interface or as a chatbot on your preferred platform. Start a conversation, and MateX will engage with you, offering empathetic responses, emotional support, and mental health resources based on your input.
 
-## Technologies Used
-
-- **Natural Language Processing (NLP)**: Powered by advanced NLP models for understanding and processing user input.
-- **Sentiment Analysis**: Detects emotional tone and provides appropriate responses.
-- **Python**: Core programming language for backend development.
-- **Flask/Django**: Frameworks for web interface (or other chatbot deployment options like Telegram, Discord).
-- **Machine Learning Models**: To enhance contextual understanding and generate empathetic responses.
 
 ## Contributions
 
@@ -55,7 +172,3 @@ We welcome contributions from the community! If you'd like to improve MateX, fee
 ## Contact
 
 For any questions, suggestions, or feedback, please open an issue or reach out to [lovishlovish107@gmail.com].
-
----
-
-This README provides a high-level overview of the project, instructions for installation, and guidance on how to use MateX.
